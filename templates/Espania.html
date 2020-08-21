@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="Espania.css">
+    <title>Curriculum España</title>
+    <style>
+        /*GLOBALS*/
+html{
+    width: 210mm;
+    height: 297mm;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 8mm 8mm 8mm 8mm;
+}
+table{
+    /* max-width: max-content; */
+    /* width: 202mm; */
+    border-collapse: collapse;
+}
+tbody{
+    width:202mm;
+
+}
+td{
+    min-width: 40mm;
+}
+ul,li,td,table,p,h1,h2,h3,h4,h5,h6,html{
+    margin: 0;
+    padding:0;
+}
+tr{
+    width:100%;
+}
+/**
+* @Reutils
+*/
+/*Backgrounds maquetas*/
+.c1{
+    background: red;
+}
+.c2{
+    background: blue;
+}
+.c3{
+    background: yellow;
+}
+.c4{
+    background: pink;
+}
+/*End Backgrounds*/
+.m-0{
+    margin:0;
+}
+.p-lr{
+    padding: 0px 15px 0px 15px;
+}
+.p-l1{
+    padding-left: 10px;
+}
+.c-gray{
+    color: gray;
+}
+.p-2{
+    padding:10px;
+}
+.fw-5{
+    font-weight: 500;
+}
+.text-center-all > *{
+    text-align: center;
+}
+.d-ib{
+display:inline-block;
+}
+
+.t{
+    vertical-align: top;
+}
+.mh-2{
+    min-height: 20mm;
+}
+.lh-2{
+    line-height: 20px;
+}
+/*
+font-sizes:
+TITLES: 20pt
+SUBTITLES: 12pt,13pt,14pt
+DESCRIPTIONS: 10pt
+*/
+.font-title{
+    font-size: 20pt;
+}
+.font-s-1{
+    font-size: 14pt;
+}
+.font-s-2{
+    font-size: 13pt;
+}
+.font-s-3{
+    font-size: 12pt;
+}
+.font-description{
+    font-size: 10pt;
+}
+
+/*CUSTOMS TEMPLATES*/
+
+.title{
+    color:red;
+    text-align: left;
+}
+.exp-container{
+    padding: 10px 0 10px 10px;
+}
+.exp-title{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 700;
+}
+.img-container{
+    padding:0;
+    margin:0;
+    width: 40mm;
+    height: 40mm;
+    /* border-radius: 50%; */
+    position:relative;
+    overflow: hidden;
+}
+.img-container img{
+    width:100%;
+    height:100%;
+    padding:0;
+    margin:0;
+    /* background: red; */
+}
+.name-profile{
+    vertical-align: top;
+    text-transform: uppercase;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 700;
+}
+    </style>
+</head>
+<body>
+    <table> 
+        <tbody>
+            <!--CABECERA-->
+          <tr>
+              <td class="img-container" rowspan="4">
+                  <p>Imagen</p>
+              </td>
+              <td class="p-2" colspan="3">
+                  <p class="name-profile font-title d-ib">Nombre</p> <span class="c-gray font-title" > Apellido </span>
+              </td>
+          </tr>
+          <tr>
+              <td colspan="3">
+                  <span class="fw-5 c-gray font-s-3 p-l1"> Puesto ocupado/buscado</span>
+              </td>
+          </tr>
+          <tr>
+              <td colspan="3" class="font-description p-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis quia hic aspernatur suscipit perferendis deserunt. Veritatis, excepturi laboriosam commodi explicabo optio sunt expedita. Illum optio perspiciatis fugiat consequatur magni libero!</td>
+          </tr>
+          <tr class="c1" class="text-center-all font-s-3">
+              <td class="p-l1 p-2 ">Numero de telefono</td>
+              <td class="p-l1 p-2">Correo electronico</td>
+              <td class="p-l1 p-2">Ubicacion</td>
+          </tr>
+
+          <!--EDUCACION-->
+          <tr>
+              <th class="title mh-2 p-2" colspan="2">EDUCACION</th>
+              <th class="title p-2" colspan="1">IDIOMAS</th>
+              <th class="title p-2" colspan="1">HABILIDADES</th>
+          </tr>
+          <tr>
+              <td class=" mh-2 fw-5 lh-2 font-description t p-2">Año <br> ciudad pais</td>
+              <td class=" mh-2 fw-5 lh-2 font-description  t p-2" >Titulo <br> Universidad o institucion</td>
+              <td class=" font-description t p-2" colspan="1">Español <br> Ingles <br> Frances</td>
+              <td class="lh-2 font-description t p-2" colspan="1"> <p> <b>Técnias:</b> Excel,Word,PowerPoint, Outlook, Photoshop. </p>    </td>
+            </tr>
+        <!--    Si tiene mas de un titulo realizar un echo de un </tr> y <tr> para que siga la esctructura
+              y agregar un rowspan a los otros td con la cantidad de titulos
+              Si tiene 2 titulos, colocarle un rowspan="2" a los siguientes <td> para seguir la estructura    
+          -->
+        <tr>
+            <td class=" mh-2 fw-5 lh-2 font-description t p-2">Año <br> ciudad pais</td>
+            <td class=" mh-2 fw-5 lh-2 font-description  t p-2" >Titulo <br> Universidad o institucion</td>
+        </tr>
+        <!--Asi debe continuar la estructura y colocarle un rowspan="n" a los dos anteriores <td> de la fila anterior-->
+            <!--EXPERIENCIA PROFESIONAL-->
+            <tr>
+                <th class="title p-2" colspan="4">EXPERIENCIA PROFESIONAL</th>
+            </tr>
+            <tr>
+                <td class="exp-container t " colspan="1">
+                    Nov. 20xx - Jul. 20XX <br>
+                    <span class="c-gray">Madrid - España</span>
+                </td>
+                <td colspan="3" class="p-2">
+                    <span class="exp-title font-s-3">TITULO</span><br>
+                    <span class="c-gray font-s-3">NOMBRE EMPRESA</span><br>
+                    <span class="font-description">En esta inicié colaborando en el área de
+                        desarrollo de sistemas como Tester
+                        analytics. Sin embargo, mis habilidades me
+                        permitieron escalar dentro de la empresas y
+                        afrontar nuevos retos y más
+                        responsabilidades.
+                        *Encargado del control de calidad del los
+                        sistemas desarrollados en el corporativo.
+                        ACTIVIDADES:
+                        -Creación de casos de pruebas
+                        -Reportes de actualización de los sistemas
+                        -Reportes de control de Impedimentos de
+                        los sistemas.
+                        -Lectura de casos de uso.
+                        *Colaborador en el área de soporte técnico.
+                        -Asistencia vía Livezilla.
+                        -Asistencia telefónica personalizada para
+                        solucionar inconveniente con respecto a los
+                        sistemas que la empresa comercializa.
+                        -Soporte técnico remoto vía Team Viewer.
+                        -Atención a cliente
+                        -Instalación de instancias SQL
+                        -Configuración de Windows Server con IIS
+                        X para la instalación de los sistemas
+                        adquiridos por los clientes.
+                        -Seguimiento de peticiones de soporte
+                        -Realización de reportes
+                        *Programador web junior
+                        -Proyectos internos de la empresa.
+                        -Gestión de servidores IIS
+                        -Gestión de servidores Linux
+                        -Administración de blogs de la empresa</span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
