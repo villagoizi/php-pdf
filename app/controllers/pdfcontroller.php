@@ -22,7 +22,7 @@ use Dompdf\Dompdf,
 
 			$dompdf = new Dompdf(array('enable_remote' => true));
 			ob_start(); 
-			require_once ROOT_PATH.'app/templates/default.php';
+			require_once ROOT_PATH.'app/templates/orange.php';
 			$html=ob_get_clean(); 
 			$dompdf->loadHtml($html);
 			$dompdf->setPaper('A4');

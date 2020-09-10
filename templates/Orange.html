@@ -21,8 +21,6 @@
         }
         table{
             border-collapse: collapse;
-            width: 194mm;
-            max-width:194mm;
         }
         td{
             max-width: 16.10mm;
@@ -130,9 +128,6 @@
         .style-none{
             list-style-type: none;
         }
-        .style-inside{
-            list-style: inside;
-        }
         .cursive{
             font-style: italic;
         }
@@ -150,42 +145,40 @@
         .relative{
             position:relative;
         }
-        .bg-blue{
-            background-color: blue;
+        .bg-orange{
+            background-color: orange;
         }
         .bg-white{
           background: white;
         }
         .img-container{
-            width: 48.20mm;
-            max-width: 48.20mm;
-            height: 48.20mm;
-            max-height: 48.20mm;
+            width: 32.20mm;
+            max-width: 32.20mm;
+            height: 32.20mm;
+            max-height: 32.20mm;
             position: relative;
+            border-radius: 50%;
             /* display:inline-block; */
             overflow: hidden;
+        }
+        .border-radius{
+          border-radius: 50%;
         }
         .img-container img{
             width:100%;
             height:100%;
         }
         .m-h{
-          min-height: 48.20mm;
+          min-height: 32.20mm;
         }
         .max-h{
-          max-height: 48.20mm;
+          max-height: 32.20mm;
         }
         .visible-none{
             visibility: hidden;
-        }
-        .divider{
-            border: .2mm solid blue;
-            border-style: dashed;
-            background-color: white;
-
-        }
+        } 
     </style>
-</head>
+</head> 
 <body>
     <table>
         <tr>
@@ -204,117 +197,141 @@
         </tr>
     <!--CABECERA-->
         <tr class="m-h">
-            <td colspan="3" class="img-container text-top">
+            <td class="bg-orange"></td>
+            <td colspan="2" class="bg-orange pt-1 img-container">
                 <img src="<?php echo $candidato->getImagen() ?>" alt="">
             </td>
-            <td colspan="5" class="p-2 text-left">
-                <p class="font-title"><?php echo $candidato->getNombreCompleto() ?></p><br><br>
+            <td colspan="5" class="p-2 bg-orange text-top c-white">
+                <p class="font-title"><?php echo $candidato->getNombreCompleto() ?></p>
                 <p class="font-s-4"><?php echo $candidato->__get('profesion') ?></p>
             </td>
-            <td colspan="4" class="p-2 text-top">
-                <ul class="font-s-4 style-none">
+            <td colspan="4" class="p-2 text-top bg-orange c-white">
+                <ul class="font-s-4 text-right style-none">
                     <li><?php echo $candidato->__get('telefono') ?></li>
-                    <li><?php echo $candidato->__get('email') ?></li>
                     <li><?php 
-                        echo $candidato->__get('direccion').', 
-                        loc.'.$u->getNomLocalidad($candidato->__get('idlocalidad')).', 
-                        Mpio. '.$u->getNomMunicipio($candidato->__get('idmunicipio')).', 
-                        '.$u->getNomEstado($candidato->__get('idestado'), true).
-                        ' C.P. '. $candidato->__get('cp'); ?>
-                </li>
-                <hr class="divider">
+                echo $candidato->__get('direccion').', 
+                loc.'.$u->getNomLocalidad($candidato->__get('idlocalidad')).', 
+                Mpio. '.$u->getNomMunicipio($candidato->__get('idmunicipio')).', 
+                '.$u->getNomEstado($candidato->__get('idestado'), true).
+                ' C.P. '. $candidato->__get('cp'); ?></li>
+                    <li><?php echo $candidato->__get('email') ?></li>
+                    <li>Perfil de linkedin</li>
                 </ul>
-                <ul class="font-s-4 text-left style-none">
-                    <li>Twitter</li>
-                    <li>Skype</li>
-                    <li>Linkedin</li>
+            </td>
+        </tr>
+        <tr>
+          <td colspan="12" class="bg-white"></td>
+        </tr>
+        <!--SOBRE MI-->
+        <tr>
+            <td colspan="12" class="font-description p-2">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis, neque sed. Ipsam, accusantium corporis fugiat beatae, cumque vero dolor nam libero consequuntur, voluptas odio necessitatibus nostrum corrupti eum. Placeat, molestias.Ratione veniam omnis nulla, voluptas quo placeat, cumque quia tenetur ullam vitae nesciunt repudiandae porro accusamus nam itaque. Quia natus, at sed nam ratione ducimus optio hic sunt? Voluptate, vero.
+            </td>
+        </tr>
+        <!--HABILIDADES E IDIOMA-->
+        <tr>
+            <td></td>
+            <td colspan="10" class="font-s-3 bold text-uppercase border-bottom p-2">Habilidades e Idiomas</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td colspan="4" class="p-2">
+                <ul class="style-none font-description">
+                    <li>Manejo de Estres</li>
+                    <li>Correccion de textos</li>
+                    <li>Trabajo en equipo</li>
                 </ul>
-            </td> 
-    </tr>
+            </td>
+            <td colspan="3" class="p-2">
+                <ul class="style-none font-description">
+                    <li>Español</li>
+                    <li>Ingles</li>
+                    <li>Aleman</li>
+                </ul>
+            </td>
+            <td colspan="3" class="font-description p-2">
+                <p>Software: Excel,Word, PowerPoint, Outlook, Photoshop, Illustrator, Wordpress</p>
+            </td>
+            <td></td>
+        </tr>
 
-    <!--EXPERIENCIA-->
-    <tr>
-        <td colspan="12" class="p-2 c-white bg-blue text-uppercase font-s-3">EXPERIENCIA PROFESIONAL</td>
-    </tr>
-    <?php 
+        <tr>
+            <td></td>
+            <td colspan="10" class="font-s-3 bold text-uppercase border-bottom p-2">educacion</td>
+            <td></td>
+        </tr>
+        <!--HISTORIAL ACADEMICO-->
+
+        <?php 
+        $historialaca = $candidato->getHistorialAcademico(true);
+        foreach ($historialaca as $key => $value) {
+            if($value['curso']!="" || !empty($value['curso'])){
+        ?>
+
+                <tr>
+                    <td></td>
+                    <td colspan="4" class="p-2 font-description text-top">
+                        <p><?php echo $value['inicio'].'-'.$value['fin'] ?></p>
+                        <p>Ciudad, Pais</p>
+                    </td>
+                    <td colspan="6" class="p-2 font-description text-top">
+                        <p class="bold"><?php echo $value['curso'] ?></p>
+                        <p class="cursive"><?php echo $value['institucion'] ?></p>
+                    </td>
+                    <td></td>
+                </tr><?php
+                }
+            }
+        ?>
+    
+
+    <!--EXPERIENCIA -->
+        <tr>
+            <td></td>
+            <td colspan="10" class="font-s-3 bold text-uppercase border-bottom p-2">experiencia</td>
+            <td></td>
+        </tr>
+        <?php 
             $historia = $candidato->getExperienciaLaboral(true);
             foreach ($historia as $key => $value) {
                 if($value['titulo']!="" || !empty($value['titulo'])){
         ?>
                     <tr>
-                        <td colspan="5" class="p-2 text-top font-description">
-                            <p><?php echo $value['empresa'] ?> &#124;</p>
+                        <td></td>
+                        <td colspan="4" class="p-2 font-description text-top">
                             <p><?php echo $value['inicio'].'-'.$value['fin'] ?></p>
+                            <p>Ciudad, Pais</p>
                         </td>
-                        <td colspan="7" class="p-2 text-top font-description">
-                            <p class="bold"><?php echo $value['titulo'] ?></p>
+                        <td colspan="6" class="font-description p-2 text-top">
+                            <p class="font-s-4 bold"><?php echo $value['empresa'] ?></p>
+                            <p><?php echo $value['titulo'] ?></p>
                             <p><?php echo $value['descripcion'] ?></p>
                         </td>
+                        <td></td>
                     </tr><?php
                 }
             }
         ?>
-    <!--FORMACION ACADEMICA-->
-    <tr>
-        <td colspan="12" class="p-2 c-white bg-blue text-uppercase font-s-3">Formacion academica</td>
-    </tr>
-    
-    <?php 
-            $historialaca = $candidato->getHistorialAcademico(true);
-            foreach ($historialaca as $key => $value) {
-                if($value['curso']!="" || !empty($value['curso'])){
-    ?>
 
-                <tr>
-                    <td colspan="5" class="p-2 text-top font-description">
-                        <p class="d-ib" ><?php echo $value['institucion'] ?></span>
-                        <p><?php echo $value['inicio'].'-'.$value['fin'] ?></p>
-                    </td>
-                    <td colspan="7" class="p-2 text-top">
-                        <p class="font-s-4 bold"><?php echo $value['curso'] ?></p>
-                        <p class="font-description"><?php echo $value['descripcion'] ?></p>
-                    </td>
-                </tr><?php
-                }
-            }
-    ?>
-    <!--IDIOMAS-->
-    <tr>
-        <td colspan="12" class="p-2 c-white bg-blue text-uppercase font-s-3">Idiomas</td>
-    </tr>
-    <tr>
-        <td colspan="12" class="p-2 font-description">
-            <ul class="style-none">
-                <li>Idioma1</li>
-                <li>Idioma2</li>
-                <li>Idioma3</li>
-            </ul>
-        </td>
-    </tr>
-    <!--INFORMATICA-->
-    <tr>
-        <td colspan="12" class="p-2 c-white bg-blue text-uppercase font-s-3">Informatica</td>
-    </tr>
-    <tr>
-        <td colspan="4" class="text-top p-2">Excel</td>
-        <td colspan="4" class="text-top p-2">Word</td>
-        <td colspan="4" class="text-top p-2">PowerPoint</td>
-    </tr>
-    <!--INTERESES-->
-    <tr>
-        <td colspan="12" class="p-2 c-white bg-blue text-uppercase font-s-3">INTERESES</td>
-    </tr>
-    <tr>
-        <td colspan="12" class="p-2 font-description">
-            <ul class="p-l1 style-inside">
-                <li>Interes 1</li>
-                <li>Interes 2</li>
-                <li>Interes 3</li>
-            </ul>
-        </td>
-    </tr>
-    
+        <tr>
+            <td></td>
+            <td colspan="10" class="font-s-3 bold text-uppercase border-bottom p-2">intereses</td>
+            <td></td>
+        </tr>
+        <!--INTERESES-->
+        <tr>
+            <td></td>
+            <td colspan="10" class="p-2 text-top">
+                <ul class="style-none font-description ">
+                    <li>Interes 1</li>
+                    <li>Interes 2</li>
+                    <li>Interes 3</li>
+                </ul>
+            </td>
+            <td></td>
+        </tr>
     </table>
 </body>
 </html>
-<!--TERMINATED-->
+<!--TERMINADO-->

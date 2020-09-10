@@ -11,6 +11,7 @@ html{
     box-sizing: border-box;
 }
 body{
+    font-size:10px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin: 8mm 2mm 2mm 8mm;
 }
@@ -79,13 +80,13 @@ h-6 = 12%;
 }
 .name-profile{
     font-weight: 700;
-    font-size: 40px;
+    font-size: 3mm;
     text-transform: uppercase;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .vacant-profile{
     font-weight: 500;
-    font-size: 18px;
+    font-size: 12px;
 }
 td{
     padding:0;
@@ -142,17 +143,16 @@ td{
     <table>
         <!--Cabecera-->
         <tbody>
-            <tr class="h-60">
-                <td class="img-container" rowspan="2">
+            <tr>
+                <td class="img-container" rowspan="3">
                     <p>Aqui va la imagen en vez de 'p' cambiar clase '.img-container p' por '.img-container img'</p>
                     <!--<img src="../media/default.jpg">
                     -->
                 </td>
-                <td class="c1 name-profile" colspan="4">
-                    Nombre
-                    Apellidos
+                <td class="c1 name-profile" rowspan="2" colspan="2">
+                    Ricardo Farrera Romero
                 </td>
-                <td rowspan="2" class="c2">
+                <td rowspan="3" class="c2">
                     Telefono: +54 999 999 999 <br>
                     Email: nombre@gmail.com<br>
                     Ubicación<br>
@@ -163,24 +163,104 @@ td{
                 </td>
             </tr>
             <tr>
-                <td class="vacant-profile c3" colspan="4">PUESTO OCUPADO/PUESTO BUSCADO</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="vacant-profile c3" colspan="2">PUESTO OCUPADO/PUESTO BUSCADO</td>
             </tr>
         <!--EXPERIENCIA LABORAL-->
         <tr>
-            <td class="exp-title bg-titles" colspan="6"> EXPERIENCIA </td>
+            <td class="exp-title bg-titles" colspan="4"> EXPERIENCIA </td>
+        </tr>
+
+        <tr>
+            <td colspan="3" class="exp-container">
+                    <h3 class="m-0 exp-bussines d-ib" >NDSoluciones S.A. de C.V.  &#124;</h3><span class="exp-vacant">Desarrollador web </span>
+                    <p class="m-0 w-2 exp-date">Noviembre 2013-Abril 2014</p>
+            </td>
+            <td colspan="3" class="exp-container">
+                NDSoluciones es una empresa nueva,
+                en esta empresa ingresé con el puesto
+                de programador web, pero aproveché
+                mis conocimientos y sobre todo los
+                pagos por comisiones para colaborar
+                en los siguientes puestos:
+                - Web Master: Encargado de la
+                administración de contenido de
+                diversas páginas web.
+                - Community Manager: Encargado en
+                la planeación de estrategias en las
+                redes sociales.
+                - Social Media: Encargado de
+                organizar a un equipo de trabajo
+                conformado por 15 personas para
+                lograr los objetivos establecidos como
+                Community manager.
+                - Agente de Ventas: Ventas por
+                cambaceo, puedo decir que mi gran
+                capacidad social y amplia visión me
+                permitió concretar grandes tratos que
+                ha llevado al éxito a esta empresa.
+            </td>
         </tr>
         <tr>
             <td colspan="3" class="exp-container">
-                    <h3 class="m-0 exp-bussines d-ib" >NOMBRE DE LA EMPRESA &#124;</h3><span class="exp-vacant"> PUESTO</span>
-                    <p class="m-0 w-2 exp-date">Sep. 20XX - Jul. 20XX</p>
+                    <h3 class="m-0 exp-bussines d-ib" >Agencia Aduanal Reyes Kuri   &#124;</h3><span class="exp-vacant">Auxiliar de sistemas</span>
+                    <p class="m-0 w-2 exp-date">Febrero del 2014-julio del 2014</p>
             </td>
             <td colspan="3" class="exp-container">
-                <ul>
-                    <li>Tareas</li>
-                    <li>Tareas</li>
-                    <li>Tareas</li>
-                    <li>Tareas</li>
-                </ul>
+                En esta agencia aduanal colaboré en el
+                área de sistemas en diferentes sub áreas:
+                -Soporte técnico: Encargado de brindar
+                soporte a todos los departamentos que
+                dependen de sistemas. Configuración de
+                redes, configuración de equipos,
+                configuración del sistema interno en caso
+                de fallas.
+                -Desarrollo: Colaborador de desarrollo en
+                tiempos libres para proyectos en fase
+                inicial.
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3" class="exp-container">
+                    <h3 class="m-0 exp-bussines d-ib" >Excelencia en Factor Humano S.A de C.V.   &#124;</h3>
+                    <span class="exp-vacant">Encargado de soporte técnico y atención a clientes </span>
+                    <p class="m-0 w-2 exp-date">4/04/15-21/11/17</p>
+            </td>
+            <td colspan="3" class="exp-container">
+                En esta inicié colaborando en el área de
+                desarrollo de sistemas como Tester
+                analytics. Sin embargo, mis habilidades me
+                permitieron escalar dentro de la empresas y
+                afrontar nuevos retos y más
+                responsabilidades.
+                *Encargado del control de calidad del los
+                sistemas desarrollados en el corporativo.
+                ACTIVIDADES:
+                -Creación de casos de pruebas
+                -Reportes de actualización de los sistemas
+                -Reportes de control de Impedimentos de
+                los sistemas.
+                -Lectura de casos de uso.
+                *Colaborador en el área de soporte técnico.
+                -Asistencia vía Livezilla.
+                -Asistencia telefónica personalizada para
+                solucionar inconveniente con respecto a los
+                sistemas que la empresa comercializa.
+                -Soporte técnico remoto vía Team Viewer.
+                -Atención a cliente
+                -Instalación de instancias SQL
+                -Configuración de Windows Server con IIS
+                X para la instalación de los sistemas
+                adquiridos por los clientes.
+                -Seguimiento de peticiones de soporte
+                -Realización de reportes
+                *Programador web junior
+                -Proyectos internos de la empresa.
+                -Gestión de servidores IIS
+                -Gestión de servidores Linux
+                -Administración de blogs de la empresa
             </td>
         </tr>
         

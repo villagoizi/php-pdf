@@ -136,7 +136,7 @@
             position:relative;
             overflow: hidden;
         }
-        .img-container p{
+        .img-container img{
             padding:0;
             margin:0;
             height:100%;
@@ -173,15 +173,15 @@
             <!--CABECERA-->
           <tr> 
               <td class="img-container" rowspan="2" colspan="1" >
-                  <img src="../../xampp/htdocs/cvtemplates/media/default.jpg">
+                  <img src="<?php echo $candidato->getImagen() ?>">
               </td>
-              <td class="p-l1 p-2 " colspan="2">Numero de telefono</td>
-              <td class="p-l1 p-2" colspan="2">Correo electronico</td>
+              <td class="p-l1 p-2 " colspan="2"><?php echo $candidato->__get('telefono') ?></td>
+              <td class="p-l1 p-2" colspan="2"><?php echo $candidato->__get('email') ?></td>
           </tr>
           <tr>
               <td colspan="4">
-                <p class="name-profile font-title">Nombre  Apellidos </p>
-                <span class="fw-5 c-green font-s-3 p-l1"> Puesto ocupado/buscado</span>
+                <p class="name-profile font-title p-l1"><?php echo $candidato->getNombreCompleto() ?></p>
+                <span class="fw-5 c-green font-s-3 p-l1"><?php echo $candidato->__get('profesion') ?></span>
               </td>
           </tr>
           <!--SOBRE MI-->

@@ -28,7 +28,7 @@
             max-width: 16.10mm;
             width: 16.10mm;
             min-width: 16.10mm;
-            /* border: .1mm solid black; */
+            border: .1mm solid black;
         }
         tbody{
             width: 194mm;
@@ -124,6 +124,9 @@
         .c-white{
             color: white;
         }
+        .c-red{
+            color:red;
+        }
         .border-bottom{
             border-bottom: .3mm solid gray;
         }
@@ -135,6 +138,9 @@
         }
         .cursive{
             font-style: italic;
+        }
+        .fw-5{
+            font-weight: 500;
         }
 
         /* CUSTOMS */
@@ -150,8 +156,8 @@
         .relative{
             position:relative;
         }
-        .bg-blue{
-            background-color: blue;
+        .bg-red{
+            background-color: red;
         }
         .bg-white{
           background: white;
@@ -184,6 +190,16 @@
             background-color: white;
 
         }
+        .max-height{
+            height:10mm;
+            max-height: 10.1mm;
+        }
+        .max-header{
+            max-height: 32.2mm;
+        }
+        .align-bottom{
+            vertical-align: bottom;
+        }
     </style>
 </head>
 <body>
@@ -204,116 +220,71 @@
         </tr>
     <!--CABECERA-->
         <tr class="m-h">
-            <td colspan="3" class="img-container text-top">
+            <td colspan="3" rowspan="3"class="img-container text-top">
                 <img src="<?php echo $candidato->getImagen() ?>" alt="">
             </td>
-            <td colspan="5" class="p-2 text-left">
-                <p class="font-title"><?php echo $candidato->getNombreCompleto() ?></p><br><br>
-                <p class="font-s-4"><?php echo $candidato->__get('profesion') ?></p>
+            <td colspan="9" class="p-2 max-header align-bottom">
+                <p class="font-title text-uppercase"><?php echo $candidato->getNombreCompleto() ?></p>
+                <p class="font-s-3 text-uppercase c-gray"><?php echo $candidato->__get('profesion') ?></p>
+                <p class="font-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore molestias rem accusamus in iusto voluptatum consequuntur possimus, iure ad ullam voluptatem odio nihil, consectetur et inventore recusandae necessitatibus</p>
+                <!--LIMITAR DESCRIPCION PORQUE DESBORDA ESTRUCTURA DE LA IMG-->
             </td>
-            <td colspan="4" class="p-2 text-top">
-                <ul class="font-s-4 style-none">
-                    <li><?php echo $candidato->__get('telefono') ?></li>
-                    <li><?php echo $candidato->__get('email') ?></li>
-                    <li><?php 
-                        echo $candidato->__get('direccion').', 
-                        loc.'.$u->getNomLocalidad($candidato->__get('idlocalidad')).', 
-                        Mpio. '.$u->getNomMunicipio($candidato->__get('idmunicipio')).', 
-                        '.$u->getNomEstado($candidato->__get('idestado'), true).
-                        ' C.P. '. $candidato->__get('cp'); ?>
-                </li>
-                <hr class="divider">
-                </ul>
-                <ul class="font-s-4 text-left style-none">
-                    <li>Twitter</li>
-                    <li>Skype</li>
-                    <li>Linkedin</li>
-                </ul>
-            </td> 
     </tr>
-
+    <!--DATA PROFILE-->
+    <tr>
+        <td colspan="9" class="bg-white"></td>
+    </tr>
+    <tr>
+        <td colspan="3" class="font-description text-center c-white bg-red"><?php echo $candidato->__get('telefono') ?></td>
+        <td colspan="3" class="font-description text-center c-white  bg-red"><?php echo $candidato->__get('email') ?></td>
+        <td colspan="3" class="font-description text-center c-white  bg-red"><?php 
+            echo $candidato->__get('direccion') ?></td>
+            <!--LIMITAR DIRECCION PORQUE DESBORDA LA ESTRUCTURA DE LA IMG-->
+    </tr>
+ 
+    <tr>
+        <td colspan="5" class="font-s-3 text-uppercase p-2 c-red">Educacion</td>
+        <td colspan="3" class="font-s-3 text-uppercase p-2 c-red">Idiomas</td>
+        <td colspan="4" class="font-s-3 text-uppercase p-2 c-red">Habilidades</td>
+    </tr>
+    <tr>
+        <!--EDUCACION-->
+        <td colspan="2" class=" mh-2 fw-5 lh-2 font-description text-top p-2">Año <br> ciudad pais</td>
+        <td colspan="3" class=" mh-2 fw-5 lh-2 font-description text-top p-2" >Titulo <br> Universidad o institucion</td>
+        <!--IDIOMAS-->
+        <td colspan="3" class="font-description text-top p-2">Español <br> Ingles <br> Frances</td>
+        <!--HABILIDADES-->
+        <td colspan="4" class="lh-2 font-description text-top p-2">
+            <p><b>Técnias:</b> Excel,Word,PowerPoint, Outlook, Photoshop. </p>
+        </td>
+      </tr>
+  <!--    Si tiene mas de un titulo realizar un echo de un </tr> y <tr> para que siga la esctructura
+        y agregar un rowspan a los otros td con la cantidad de titulos
+        Si tiene 2 titulos, colocarle un rowspan="2" a los siguientes <td> para seguir la estructura    
+    -->
     <!--EXPERIENCIA-->
     <tr>
-        <td colspan="12" class="p-2 c-white bg-blue text-uppercase font-s-3">EXPERIENCIA PROFESIONAL</td>
+        <td colspan="12" class="font-s-3 text-uppercase p-2 c-red">Experiencia laboral</td>
     </tr>
     <?php 
-            $historia = $candidato->getExperienciaLaboral(true);
-            foreach ($historia as $key => $value) {
-                if($value['titulo']!="" || !empty($value['titulo'])){
-        ?>
-                    <tr>
-                        <td colspan="5" class="p-2 text-top font-description">
-                            <p><?php echo $value['empresa'] ?> &#124;</p>
-                            <p><?php echo $value['inicio'].'-'.$value['fin'] ?></p>
-                        </td>
-                        <td colspan="7" class="p-2 text-top font-description">
-                            <p class="bold"><?php echo $value['titulo'] ?></p>
-                            <p><?php echo $value['descripcion'] ?></p>
-                        </td>
-                    </tr><?php
-                }
-            }
-        ?>
-    <!--FORMACION ACADEMICA-->
-    <tr>
-        <td colspan="12" class="p-2 c-white bg-blue text-uppercase font-s-3">Formacion academica</td>
-    </tr>
-    
-    <?php 
-            $historialaca = $candidato->getHistorialAcademico(true);
-            foreach ($historialaca as $key => $value) {
-                if($value['curso']!="" || !empty($value['curso'])){
+    $historia = $candidato->getExperienciaLaboral(true);
+    foreach ($historia as $key => $value) {
+        if($value['titulo']!="" || !empty($value['titulo'])){
     ?>
-
-                <tr>
-                    <td colspan="5" class="p-2 text-top font-description">
-                        <p class="d-ib" ><?php echo $value['institucion'] ?></span>
-                        <p><?php echo $value['inicio'].'-'.$value['fin'] ?></p>
-                    </td>
-                    <td colspan="7" class="p-2 text-top">
-                        <p class="font-s-4 bold"><?php echo $value['curso'] ?></p>
-                        <p class="font-description"><?php echo $value['descripcion'] ?></p>
-                    </td>
-                </tr><?php
-                }
-            }
-    ?>
-    <!--IDIOMAS-->
-    <tr>
-        <td colspan="12" class="p-2 c-white bg-blue text-uppercase font-s-3">Idiomas</td>
-    </tr>
-    <tr>
-        <td colspan="12" class="p-2 font-description">
-            <ul class="style-none">
-                <li>Idioma1</li>
-                <li>Idioma2</li>
-                <li>Idioma3</li>
-            </ul>
-        </td>
-    </tr>
-    <!--INFORMATICA-->
-    <tr>
-        <td colspan="12" class="p-2 c-white bg-blue text-uppercase font-s-3">Informatica</td>
-    </tr>
-    <tr>
-        <td colspan="4" class="text-top p-2">Excel</td>
-        <td colspan="4" class="text-top p-2">Word</td>
-        <td colspan="4" class="text-top p-2">PowerPoint</td>
-    </tr>
-    <!--INTERESES-->
-    <tr>
-        <td colspan="12" class="p-2 c-white bg-blue text-uppercase font-s-3">INTERESES</td>
-    </tr>
-    <tr>
-        <td colspan="12" class="p-2 font-description">
-            <ul class="p-l1 style-inside">
-                <li>Interes 1</li>
-                <li>Interes 2</li>
-                <li>Interes 3</li>
-            </ul>
-        </td>
-    </tr>
-    
+            <tr>
+                <td colspan="5" class="p-2 font-description text-top">
+                    <p><?php echo $value['inicio'].'-'.$value['fin'] ?></p>
+                    <p>Ciudad, Pais</p>
+                </td>
+                <td colspan="7" class="p-2 text-top">
+                    <p class="font-s-4 bold"><?php echo $value['empresa'] ?></p>
+                    <p class="c-gray font-s-4 bold"><?php echo $value['titulo'] ?></p>
+                    <p class="font-description"><?php echo $value['descripcion'] ?></p>
+                </td>
+            </tr><?php
+        }
+    }
+?>
     </table>
 </body>
 </html>

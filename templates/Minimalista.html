@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Minimalista.css">
+    <title>Curriculum Minimalista</title>
+    <style>
+                /*GLOBALS*/
+                html{
+            width: 210mm;
+            height: 297mm;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            margin: 8mm 8mm 8mm 8mm;
+        }
+        table{
+            /* max-width: max-content; */
+            /* width: 202mm; */
+            border-collapse: collapse;
+        }
+        tbody{
+            width:202mm;
+            
+        }
+        td{
+            min-width: 10mm;
+        }
+        ul,li,td,table,p,h1,h2,h3,h4,h5,h6,html{
+            margin: 0;
+            padding:0;
+        }
+        tr{
+            width:100%;
+        }
+        /**
+        * @Reutils
+        */
+        /*Backgrounds maquetas*/
+        .c1{
+            background: red;
+        }
+        .c2{
+            background: blue;
+        }
+        .c3{
+            background: yellow;
+        }
+        .c4{
+            background: pink;
+        }
+        /*End Backgrounds*/
+        .m-0{
+            margin:0;
+        }
+        .p-lr{
+            padding: 0px 15px 0px 15px;
+        }
+        .p-l1{
+            padding-left: 10px;
+        }
+        .pb-1{
+            padding-bottom: 10px;
+        }
+        .c-gray{
+            color: gray;
+        }
+        .p-2{
+            padding:10px;
+        }
+        .fw-5{
+            font-weight: 500;
+        }
+        .text-center-all > *{
+            text-align: center;
+        }
+        .d-ib{
+        display:inline-block;
+        }
+        .bold{
+            font-weight: bold;
+        }
+        .t{
+            vertical-align: top;
+        }
+        .mh-2{
+            min-height: 20mm;
+        }
+        .lh-2{
+            line-height: 20px;
+        }
+        .m-auto{
+            margin: 0 auto;
+        }
+        .style-none{
+            list-style-type: none;
+        }
+        /*
+        font-sizes:
+        TITLES: 20pt
+        SUBTITLES: 12pt,13pt,14pt
+        DESCRIPTIONS: 10pt
+        */
+        .font-title{
+            font-size: 20pt;
+        }
+        .font-s-1{
+            font-size: 14pt;
+        }
+        .font-s-2{
+            font-size: 13pt;
+        }
+        .font-s-3{
+            font-size: 12pt;
+        }
+        .font-description{
+            font-size: 10pt;
+        }
+        
+        /*CUSTOMS TEMPLATES*/
+        
+        .title{
+            color:red;
+            text-align: left;
+        }
+        .exp-container{
+            padding: 10px 0 10px 10px;
+        }
+        .exp-title{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: 700;
+        }
+        .img-container{
+            padding:0;
+            margin:0;
+            width: 40mm;
+            max-width: 40mm;
+            height: 40mm;
+            position:relative;
+            overflow: hidden;
+        }
+        .img-container img{
+            width:100%;
+            height:100%;
+            padding:0;
+            margin:0;
+            /* background: red; */
+        }
+        .name-profile{
+            vertical-align: top;
+            text-transform: uppercase;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: 700;
+        }
+.border-bottom{
+    border-bottom: .3mm solid greenyellow;
+}
+.border-right{
+    border-right: .3mm solid greenyellow;
+}
+.border-top{
+    border-top: .3mm solid greenyellow;
+}
+.descirption{
+    padding: 0 10px 10px 10px;
+}
+th{
+    text-align: left;
+    font-weight: bold;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+    </style>
+</head>
+<body>
+    <table>
+        <!--CABECERA-->
+        <tr>
+            <td colspan="1"></td>
+            <td colspan="2" class="p-2">
+                <p class="name-profile font-title">Nombre  Apellidos </p>
+                <span class="fw-5 c-green font-s-3"> Puesto ocupado/buscado</span>
+            </td>
+            <td class="img-container" colspan="1" >
+                <img src="../media/default.jpg">
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <!--DATA PROFILE-->
+        <tr>
+            <td colspan="2" class="font-description lh-2 text-center-all border-top border-bottom border-right">
+                <ul class="style-none">
+                    <li>Español</li>
+                    <li>Español</li>
+                    <li>Español</li>
+                </ul>
+            </td>
+            <td colspan="2" class="font-description lh-2 text-center-all border-top border-bottom border-right">
+                <ul class="style-none">
+                    <li>Ubicacion</li>
+                    <li>Ubicacion</li>
+                    <li>Ubicacion</li>
+                </ul>
+            </td>
+            <td colspan="2" class="text-center-all lh-2 font-description border-top border-bottom">
+                <p class="bold">SOFTWARE</p>
+                <p class="font-description">Excel, Word, Powerpoint, Outlook,Photoshop,Illustrator,Wordpress</p>
+            </td>
+        </tr>
+        <!--INTERESES-->
+        <tr>
+            <th colspan="6" class="p-2">INTERESES</th>
+        </tr>
+        <tr>
+            <td colspan="6" class="p-2 font-description">
+                <ul class="p-l1 interes">
+                    <li>Interes 1</li>
+                    <li>Interes 2</li>
+                    <li>Interes 3</li>
+                </ul>
+            </td>
+        </tr>
+        <!--EDUCACION-->
+        <tr>
+            <th class="p-2 border-top" colspan="6">Educacion</th>
+        </tr>
+        <tr>
+            <td colspan="2" class="t p-2">
+                <p class="font-description bold">Nov. 20XX - Jul. 20xx</p>
+                <span class="font-description c-gray">Buenos Aires, Argentina</span>
+            </td>
+            <td colspan="4" class="t p-2">
+                <span class="exp-title font-s-3">GRADO XXXXXXXXXXXXXXXXXXXXX</span><br>
+                <em class="c-gray font-s-3">Unversidad,Colegio,Instituto</em>
+            </td>
+        </tr>
+        <!--EXPERIENCIAS-->
+        <tr>
+            <th colspan="6" class="border-top p-2">EXPERIENCIAS PROFESIONALES</th>
+        </tr>
+        <tr>
+            <td colspan="2" class="t p-2">
+                <p class="font-description bold">Nov. 20XX - Jul. 20xx</p>
+                <span class="font-description c-gray">Buenos Aires, Argentina</span>
+            </td>
+            <td colspan="4" class="p-2">
+                <span class="exp-title font-s-3">TITULO</span><br>
+                <span class="c-gray font-s-3">NOMBRE EMPRESA</span><br>
+                <span class="font-description">En esta inicié colaborando en el área de
+                    desarrollo de sistemas como Tester
+                    analytics. Sin embargo, mis habilidades me
+                    permitieron escalar dentro de la empresas y
+                    afrontar nuevos retos y más
+                    responsabilidades.
+                    *Encargado del control de calidad del los
+                    sistemas desarrollados en el corporativo.
+                    ACTIVIDADES:
+                    -Creación de casos de pruebas
+                    -Reportes de actualización de los sistemas
+                    -Reportes de control de Impedimentos de
+                    los sistemas.
+                    -Lectura de casos de uso.
+                    *Colaborador en el área de soporte técnico.
+                    -Asistencia vía Livezilla.
+                    -Asistencia telefónica personalizada para
+                    solucionar inconveniente con respecto a los
+                    sistemas que la empresa comercializa.
+                    -Soporte técnico remoto vía Team Viewer.
+                    -Atención a cliente
+                    -Instalación de instancias SQL
+                    -Configuración de Windows Server con IIS
+                    X para la instalación de los sistemas
+                    adquiridos por los clientes.
+                    -Seguimiento de peticiones de soporte
+                    -Realización de reportes
+                    *Programador web junior
+                    -Proyectos internos de la empresa.
+                    -Gestión de servidores IIS
+                    -Gestión de servidores Linux
+                    -Administración de blogs de la empresa</span>
+            </td>
+        </tr>
+        <!--HABILIDADES-->
+        <tr>
+            <th colspan="6" class="p-2 border-top">HABILIDADES</th>
+        </tr>
+        <tr>
+            <td class="p-2 text-center-all border-right" colspan="2">Manejo del estres</td>
+            <td class="p-2 text-center-all border-right" colspan="2">Correccion de textos</td>
+            <td class="p-2 text-center-all" colspan="2">Trabajo en Equipo</td>
+        </tr>
+        <tr>
+            <td class="p-2 text-center-all border-right" colspan="2">XXXXXXXXXXX</td>
+            <td class="p-2 text-center-all border-right" colspan="2">XXXXXXXXXXXXX</td>
+            <td class="p-2 text-center-all" colspan="2">XXXXXXXXXXXXXXXX</td>        
+        </tr>
+    </table>
+</body>
+</html>

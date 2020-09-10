@@ -28,7 +28,7 @@
             max-width: 16.10mm;
             width: 16.10mm;
             min-width: 16.10mm;
-            /* border: .1mm solid black; */
+            border: .1mm solid black;
         }
         tbody{
             width: 194mm;
@@ -217,11 +217,10 @@
                     <li><?php echo $candidato->__get('email') ?></li>
                     <li><?php 
                         echo $candidato->__get('direccion').', 
-                        loc.'.$u->getNomLocalidad($candidato->__get('idlocalidad')).', 
-                        Mpio. '.$u->getNomMunicipio($candidato->__get('idmunicipio')).', 
-                        '.$u->getNomEstado($candidato->__get('idestado'), true).
-                        ' C.P. '. $candidato->__get('cp'); ?>
-                </li>
+                loc.'.$u->getNomLocalidad($candidato->__get('idlocalidad')).', 
+                Mpio. '.$u->getNomMunicipio($candidato->__get('idmunicipio')).', 
+                '.$u->getNomEstado($candidato->__get('idestado'), true).
+                ' C.P. '. $candidato->__get('cp'); ?></li>
                 <hr class="divider">
                 </ul>
                 <ul class="font-s-4 text-left style-none">
@@ -232,52 +231,84 @@
             </td> 
     </tr>
 
-    <!--EXPERIENCIA-->
     <tr>
         <td colspan="12" class="p-2 c-white bg-blue text-uppercase font-s-3">EXPERIENCIA PROFESIONAL</td>
     </tr>
-    <?php 
-            $historia = $candidato->getExperienciaLaboral(true);
-            foreach ($historia as $key => $value) {
-                if($value['titulo']!="" || !empty($value['titulo'])){
-        ?>
-                    <tr>
-                        <td colspan="5" class="p-2 text-top font-description">
-                            <p><?php echo $value['empresa'] ?> &#124;</p>
-                            <p><?php echo $value['inicio'].'-'.$value['fin'] ?></p>
-                        </td>
-                        <td colspan="7" class="p-2 text-top font-description">
-                            <p class="bold"><?php echo $value['titulo'] ?></p>
-                            <p><?php echo $value['descripcion'] ?></p>
-                        </td>
-                    </tr><?php
-                }
-            }
-        ?>
+    <!--EXPERIENCIA-->
+    <tr>
+        <td colspan="5" class="p-2 text-top font-description">
+            <p class="d-ib" >NDSoluciones S.A. de C.V.  &#124;</p><span>Desarrollador web </span>
+            <p>Noviembre 2013-Abril 2014</p>
+        </td>
+        <td colspan="7" class="p-2 text-top font-description">
+            <p> NDSoluciones es una empresa nueva,
+                en esta empresa ingresé con el puesto
+                de programador web, pero aproveché
+                mis conocimientos y sobre todo los
+                pagos por comisiones para colaborar
+                en los siguientes puestos:
+                - Web Master: Encargado de la
+                administración de contenido de
+                diversas páginas web.
+                - Community Manager: Encargado en
+                la planeación de estrategias en las
+                redes sociales.
+                - Social Media: Encargado de
+                organizar a un equipo de trabajo
+                conformado por 15 personas para
+                lograr los objetivos establecidos como
+                Community manager.
+                - Agente de Ventas: Ventas por
+                cambaceo, puedo decir que mi gran
+                capacidad social y amplia visión me
+                permitió concretar grandes tratos que
+                ha llevado al éxito a esta empresa.</p>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="5" class="p-2 text-top font-description">
+            <p class="d-ib" >NDSoluciones S.A. de C.V.  &#124;</p><span>Desarrollador web </span>
+            <p>Noviembre 2013-Abril 2014</p>
+        </td>
+        <td colspan="7" class="p-2 text-top font-description">
+            <p> NDSoluciones es una empresa nueva,
+                en esta empresa ingresé con el puesto
+                de programador web, pero aproveché
+                mis conocimientos y sobre todo los
+                pagos por comisiones para colaborar
+                en los siguientes puestos:
+                - Web Master: Encargado de la
+                administración de contenido de
+                diversas páginas web.
+                - Community Manager: Encargado en
+                la planeación de estrategias en las
+                redes sociales.
+                - Social Media: Encargado de
+                organizar a un equipo de trabajo
+                conformado por 15 personas para
+                lograr los objetivos establecidos como
+                Community manager.
+                - Agente de Ventas: Ventas por
+                cambaceo, puedo decir que mi gran
+                capacidad social y amplia visión me
+                permitió concretar grandes tratos que
+                ha llevado al éxito a esta empresa.</p>
+        </td>
+    </tr>
     <!--FORMACION ACADEMICA-->
     <tr>
         <td colspan="12" class="p-2 c-white bg-blue text-uppercase font-s-3">Formacion academica</td>
     </tr>
-    
-    <?php 
-            $historialaca = $candidato->getHistorialAcademico(true);
-            foreach ($historialaca as $key => $value) {
-                if($value['curso']!="" || !empty($value['curso'])){
-    ?>
-
-                <tr>
-                    <td colspan="5" class="p-2 text-top font-description">
-                        <p class="d-ib" ><?php echo $value['institucion'] ?></span>
-                        <p><?php echo $value['inicio'].'-'.$value['fin'] ?></p>
-                    </td>
-                    <td colspan="7" class="p-2 text-top">
-                        <p class="font-s-4 bold"><?php echo $value['curso'] ?></p>
-                        <p class="font-description"><?php echo $value['descripcion'] ?></p>
-                    </td>
-                </tr><?php
-                }
-            }
-    ?>
+    <tr>
+        <td colspan="5" class="p-2 text-top font-description">
+            <p class="d-ib" >NDSoluciones S.A. de C.V.  &#124;</p><span>Desarrollador web </span>
+            <p>Noviembre 2013-Abril 2014</p>
+        </td>
+        <td colspan="7" class="p-2 text-top">
+            <p class="font-s-4 bold">TITULO</p>
+            <p class="font-description">Description breve</p>
+        </td>
+    </tr>
     <!--IDIOMAS-->
     <tr>
         <td colspan="12" class="p-2 c-white bg-blue text-uppercase font-s-3">Idiomas</td>

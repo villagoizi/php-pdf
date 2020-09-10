@@ -1,0 +1,34 @@
+
+        /* COLUMNS */
+        html{
+            width: 210mm;
+            height: 297mm;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            margin: 8mm 8mm 8mm 8mm;
+        }
+        table{
+            /* max-width: max-content; */
+            /* width: 202mm; */
+            border-collapse: collapse;
+            /* border: 1px solid black; */
+        }
+        td{
+            max-width: 16.67mm;
+            width: 16.67mm;
+            min-width: 16.67mm;
+            border: .1mm solid gray;
+        }
+        tbody{
+            width: 196mm;
+            border: .1mm solid black;
+        }
+        ul,li,td,table,p,h1,h2,h3,h4,h5,h6,html{
+            margin: 0;
+            padding:0;
+        }
+        tr{
+            width:100%;
+        }

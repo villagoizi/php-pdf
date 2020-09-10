@@ -207,6 +207,12 @@ class usuarioController{
      * @var integer idsubcategoria
      * @access private
      */
+    private $nacionalidad;
+    /**
+     * Nacionalidad para test
+     * @var integer idsubcategoria
+     * @access private
+     */
     private $idsubcategoria;
     /**
      * Nombre del archivo CV PDF en bucket s3
@@ -252,7 +258,7 @@ class usuarioController{
         $this->usuario=1;
         $this->email="email@correo.com";
         $this->password="123";
-        $this->imagen="default.jpg";
+        $this->imagen="ind.jpg";
         $this->registro="12-08-2020";
         $this->ip="192.168.1.254";
         $this->imgresos=NULL;
@@ -284,6 +290,7 @@ class usuarioController{
         $this->idsubcategoria=1;
         $this->pdfs3=NULL;
         $this->pdflocal=1;
+        $this->nacionalidad="Mexico";
 
     }
 
@@ -294,6 +301,14 @@ class usuarioController{
     public function getNombreCompleto(){
         return $this->nombre.' '.$this->apellido1.' '.$this->apellido2;
     }
+    /**
+     * Regresa Nacionalidad del candidato
+     * @return string
+     */
+    public function getNacionalidad(){
+        return 'Mexico';
+    }
+
     /**
      * Obtiene el sexo del usuario en texto completo
      * @return string sexo
